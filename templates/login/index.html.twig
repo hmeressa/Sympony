@@ -1,0 +1,16 @@
+{# templates/login.html.twig #}
+{% extends 'header.html.twig' %}
+
+{% block content %}
+
+	<link rel="stylesheet" href="{{ asset('css/login.css') }}">
+	<form action="{{ path('login') }}" method="post">
+		<h2>Login</h2>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="_username" required autofocus>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="_password" required>
+		<input type="submit" value="Login">
+		<a href="{{ path('signup') }}" class="signup-btn">Sign Up</a>
+	</form>
+{% endblock %}

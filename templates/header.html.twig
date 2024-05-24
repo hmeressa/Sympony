@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f4f4f4;
+				margin: 0;
+				padding: 60px 0 0;
+			}
+			header {
+				background-color: #331;
+				color: #fff;
+				padding: 70px 0;
+				position: fixed; /* Make the header fixed */
+				top: 0; /* Position it at the top of the viewport */
+				left: 0; /* Align it to the left side */
+				width: 100%; /* Make it full width */
+				z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
+			}
+			nav ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+			nav ul li {
+				display: inline;
+				margin-right: 10px;
+			}
+			nav ul li a {
+				color: #fff;
+				text-decoration: none;
+			}
+			.container {
+				margin: 20px auto;
+				max-width: 960px;
+				padding: 0 20px;
+			}
+			footer {
+				background-color: #333;
+				color: #fff;
+				text-align: center;
+				padding: 10px 0;
+			}
+		</style>
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><ahref="{{path('home')}}">Home</a></li>
+					<li><ahref="{{path('about')}}">About</a></li>
+					<li><ahref="{{path('contact')}}">Contact</a></li>
+					<li><ahref="{{path('register')}}">Register</a></li>
+					<li><ahref="{{path('logout')}}">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="container"> {% block content %}{% endblock %}
+			</div>
+		</body>
+	</html>

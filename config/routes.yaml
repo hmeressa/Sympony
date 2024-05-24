@@ -1,3 +1,27 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+    
+login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+signup:
+    path: /signup
+    controller: App\Controller\SecurityController::signup
+home:
+    path: /home
+    controller: App\Controller\SecurityController::home
+about:
+    path: /about
+    controller: App\Controller\SecurityController::about
+contact:
+    path: /contact
+    controller: App\Controller\SecurityController::contact
+register:
+    path: /register
+    controller: App\Controller\SecurityController::register
+logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+    
+
